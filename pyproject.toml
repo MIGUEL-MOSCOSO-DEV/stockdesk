@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stockdesk-desktop"
+version = "1.0.0"
+description = "Offline desktop inventory, stock ledger, sales, PDF receipts and consistent backups."
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Miguel Moscoso", email = "miguelmoscoso.devperu@gmail.com"}]
+dependencies = ["reportlab==5.1.0"]
+
+[project.scripts]
+stockdesk = "stockdesk.app:main"
+
+[project.urls]
+Repository = "https://github.com/MIGUEL-MOSCOSO-DEV/stockdesk"
+Issues = "https://github.com/MIGUEL-MOSCOSO-DEV/stockdesk/issues"
+
+[tool.setuptools.packages.find]
+include = ["stockdesk*"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
